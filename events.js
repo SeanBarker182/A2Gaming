@@ -173,3 +173,12 @@ function makeApiCall() {
     });
   });
 }
+
+if (window.addEventListener) {
+    //call init() on page load
+    console.log("> Adding TC39 Event Listener...");
+    window.addEventListener("load", makeApiCall, false);
+  } else if (window.attachEvent) {
+    console.log("> Adding MS Event Listener...");
+    window.attachEvent("onload", makeApiCall;
+  }
