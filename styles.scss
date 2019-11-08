@@ -1,0 +1,121 @@
+// This is used to keep the page content contained on large screens
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// Correctly size the logo
+#logo {
+  width: 15%;
+  min-width: 250px;
+}
+
+// This is used to style the banner image
+#img-head {
+  height: 600px;
+  background: url(Assets/bck_ban.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .hero {
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    line-height: 0.2;
+    margin-top: 150px;
+  }
+
+  #hl1 {
+    font-size: 72px;
+    font-weight: 700;
+    margin-top: 20px;
+
+    img {
+      margin-top: -20px;
+    }
+  }
+
+  #hl2 {
+    font-size: 48px;
+    margin-top: -12.5px;
+
+    #lan {
+      color: #ee553b;
+    }
+  }
+  #hl3 {
+    color: white;
+    font-size: 20px;
+    margin-top: -5px;
+  }
+}
+
+#about-sec {
+  margin-top: 50px;
+  img {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+.titles {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+}
+.subtitles {
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  color: #555555;
+  margin-top: -10px;
+}
+.ail {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  background-color: #17355f;
+  color: white;
+  padding: 10px 0;
+}
+#pgdiv {
+  width: 100%;
+  //margin-top: -100px;
+}
+#testbox {
+  height: 300px;
+  background-color: #17355f;
+  color: white;
+}
+//styles for small screens
+@media (max-width: 600px) {
+  #img-head {
+    height: 400px !important;
+  }
+  #logo {
+    min-width: 200px !important;
+  }
+  .hero {
+    max-width: 300px !important;
+  }
+  #hl1 {
+    font-size: 36px !important;
+    margin-top: -100px !important;
+
+    img {
+      width: 20%;
+      margin-top: 5px !important;
+      margin-bottom: 10px;
+    }
+  }
+  #hl2 {
+    font-size: 24px !important;
+  }
+  #hl3 {
+    font-size: 15px !important;
+  }
+  #pgdiv {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
