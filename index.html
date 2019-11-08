@@ -85,8 +85,6 @@
     <div id="testbox">
       <h1 class="titles">SCHEDULE</h1>
       <hr />
-      <ul id="events-upcoming"></ul>
-      <ul id="events-past"></ul>
     </div>
     <!-- Display the footer -->
     <footer>
@@ -100,36 +98,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- FormatGoogleCalendar Javascript file -->
-    <script src="/js/format-google-calendar.min.js"></script>
-    <script>
-      formatGoogleCalendar.init({
-        calendarUrl:
-          "https://www.googleapis.com/calendar/v3/calendars/a2ftwayne@gmail.com/events?key=AIzaSyAOD2s7_35TG9z_Xxu_cAE1oS6wNzLnZso",
-        past: false,
-        upcoming: true,
-        sameDayTimes: true,
-        dayNames: true,
-        pastTopN: -1,
-        upcomingTopN: 3,
-        itemsTagName: "li",
-        upcomingSelector: "#events-upcoming",
-        pastSelector: "#events-past",
-        recurringEvents: true,
-        upcomingHeading: "<h2>Upcoming events</h2>",
-        pastHeading: "<h2>Past events</h2>",
-        format: [
-          "*date*",
-          ": ",
-          "*summary*",
-          " — ",
-          "*description*",
-          " in ",
-          "*location*"
-        ],
-        timeMin: "2016-06-03T10:00:00-07:00",
-        timeMax: "2020-06-03T10:00:00-07:00"
-      });
-    </script>
   </body>
 </html>
