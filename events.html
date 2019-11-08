@@ -1,6 +1,8 @@
 <html>
   <head> </head>
   <body text="white" link="#00ffff" vlink="green" alink="yellow">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2/moment.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <script>
       /* This solution makes use of "simple access" to google, providing only an API Key.
        * This way we can only get access to public calendars. To access a private calendar,
@@ -74,8 +76,7 @@
       // Loads the JavaScript client library and invokes `start` afterwards.
       gapi.load("client", printCalendar);
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2/moment.min.js"></script>
-    <script src="https://apis.google.com/js/api.js"></script>
+
     <div id="wellness-calendar"></div>
   </body>
 </html>
