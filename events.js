@@ -69,3 +69,8 @@ function printCalendar() {
 
 // Loads the JavaScript client library and invokes `start` afterwards.
 gapi.load("client", printCalendar);
+
+var CLIENT_ID =
+  "483492413166-82l86cc4gh7tb6tt6ar8m1eqpt2ccs65.apps.googleusercontent.com";
+var API_KEY = "AIzaSyDWlMhfMOomI76uPUCFr9U-MQPCRbdqfH8";
+var CAL_ID = "a2ftwayne@gmail.com";
