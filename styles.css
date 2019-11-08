@@ -84,9 +84,38 @@
 }
 
 #testbox {
-  height: 300px;
   background-color: #17355f;
   color: white;
+}
+
+.event-box {
+  margin-top: 25px;
+  margin-right: 5%;
+}
+
+#events .evt-mon {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  background-image: url(Assets/cir.png);
+}
+
+#events .even-date {
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  padding: 1%;
+}
+
+#events .evt-title {
+  margin-left: 25px;
+  font-family: "Anton", sans-serif;
+  font-size: 25px;
+}
+
+#events .evt-time {
+  margin-left: 25px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
 
 @media (max-width: 600px) {

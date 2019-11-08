@@ -1,6 +1,6 @@
 var clientId =
-  "483492413166-82l86cc4gh7tb6tt6ar8m1eqpt2ccs65.apps.googleusercontent.com"; //choose web app client Id, redirect URI and Javascript origin set to http://localhost
-var apiKey = "AIzaSyDWlMhfMOomI76uPUCFr9U-MQPCRbdqfH8"; //choose public apiKey, any IP allowed (leave blank the allowed IP boxes in Google Dev Console)
+  "278666276805-k45o29icg2j6b1a8la4fddonvbaba4jj.apps.googleusercontent.com"; //choose web app client Id, redirect URI and Javascript origin set to http://localhost
+var apiKey = "AIzaSyAOD2s7_35TG9z_Xxu_cAE1oS6wNzLnZso"; //choose public apiKey, any IP allowed (leave blank the allowed IP boxes in Google Dev Console)
 var userEmail = "a2ftwayne@gmail.com"; //your calendar Id
 var userTimeZone = "Indianapolis"; //example "Rome" "Los_Angeles" ecc...
 var maxRows = 10; //events to shown
@@ -170,6 +170,7 @@ function makeApiCall() {
       }
       document.getElementById("updated").innerHTML = "updated " + today;
       document.getElementById("calendar").innerHTML = calName;
+      console.log(str);
     });
   });
 }
