@@ -9,18 +9,10 @@
  * as described in https://developers.google.com/api-client-library/javascript/start/start-js
  */
 function printCalendar() {
-  // The "Calendar ID" from your calendar settings page, "Calendar Integration" secion:
+  // set the variables to load from the google API
   var calendarId = "a2ftwayne@gmail.com";
-
-  // 1. Create a project using google's wizzard: https://console.developers.google.com/start/api?id=calendar
-  // 2. Create credentials:
-  //    a) Go to https://console.cloud.google.com/apis/credentials
-  //    b) Create Credentials / API key
-  //    c) Since your key will be called from any of your users' browsers, set "Application restrictions" to "None",
-  //       leave "Website restrictions" blank; you may optionally set "API restrictions" to "Google Calendar API"
   var apiKey = "AIzaSyAOD2s7_35TG9z_Xxu_cAE1oS6wNzLnZso";
-  // You can get a list of time zones from here: http://www.timezoneconverter.com/cgi-bin/zonehelp
-  var userTimeZone = "Europe/Budapest";
+  var userTimeZone = "Indianapolis";
 
   // Initializes the client with the API key and the Translate API.
   gapi.client
@@ -39,7 +31,7 @@ function printCalendar() {
         timeZone: userTimeZone,
         singleEvents: true,
         timeMin: new Date().toISOString(), //gathers only events not happened yet
-        maxResults: 5,
+        maxResults: 4,
         orderBy: "startTime"
       });
     })
@@ -48,10 +40,12 @@ function printCalendar() {
         if (response.result.items) {
           var i = 1;
           var calendarRows = [];
+          //Split the response in to an array for fromatting
           response.result.items.forEach(function(entry) {
             var dateAt = moment(entry.start.dateTime)
               .format("L")
               .split("/");
+            // Replace the month number with corresponding name
             if (dateAt[0] == 01) {
               monNam = "JAN";
             } else if (dateAt[0] == 02) {
@@ -79,23 +73,96 @@ function printCalendar() {
             } else {
               monNam = "ERROR";
             }
+
+            // Declare the variables for each API result
             var startsAt = moment(entry.start.dateTime).format("LT");
             var endsAt = moment(entry.end.dateTime).format("LT");
-            calendarRows.push(
-              `<h3 class="event-box">
-          <a id="date${i}" class="evt-mon">${monNam}</a
-          ><a id="title${i}" class="evt-title">${entry.summary}</a><br /><a
-            class="even-date"
-            >${dateAt[1]}</a
-          ><a id="time${i}" class="evt-time">${startsAt} - ${endsAt}</a>
-        </h3>
-      </div>`
-            );
+            var testLink = moment(entry.htmlLink).format("L");
+            var imgTitle;
+            var evtDesc;
+
+            // Assign the corresponding image and desc based on event title
+            if (entry.summary == "FORTNITE FRIDAY") {
+              console.log(testLink);
+              imgTitle = "fortnite.jpg";
+              evtDesc =
+                "Join us for our weekly Fortnite scrim tournament. Players will team up in groups of two and will have either 2 hours or 6 games (whichever ends sooner) to make it to the top of the bracket. Cash prizes are awarded to the top 3 contestants. $10 entry fee. Cash prize is dependent on the number of entries.";
+            } else if (entry.summary == "SUPER SMASH BRACKETS") {
+              imgTitle = "ssb.jpg";
+            } else if (entry.summary == "LEAUGE OF LEGENDS TOURNAMENT ") {
+              imgTitle = "lol.jpg";
+            } else if (entry.summary == "2v2 TUESDAY - Call of Duty") {
+              imgTitle = "cod.jpg";
+            } else if (entry.summary == "2V2 TUESDAY - Counter Strike") {
+              imgTitle = "cs.jpg";
+            }
+            // This is where the magic happens
+            // We need this elif loop because the card will have it's own divs to style in row
+            if (i == 1 || i == 3) {
+              calendarRows.push(
+                `<div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="event-card">
+                        <img alt="Event image" src="Assets/${imgTitle}" />
+                        <h2 class="evt-title">
+                          ${entry.summary}
+                        </h2>
+                        <hr />
+                        <h3>
+                          ${monNam} ${dateAt[1]}｜${startsAt} - ${endsAt}
+                        </h3>
+                        <hr />
+                        <p>
+                          Join us for our weekly Fortnite scrim turnoment. Players will team up
+                          in groups of two and will have either 2 hours or 6 games (whichever
+                          ends sooner) to make it to the top of the bracket. Cash prizes are
+                          awarded to the top 3 contestents. $10 entry fee. Cash prize is
+                          dependant on the number of entries.
+                        </p>
+                        <p>
+                          <a class="btn" href="#">Contact us »</a>
+                        </p>
+                      </div>
+                  </div>`
+              );
+            } else if (i == 2 || i == 4) {
+              calendarRows.push(
+                `<div class="col-md-6">
+                <div class="event-card">
+                  <img alt="Event image" src="Assets/${imgTitle}" />
+                  <h2>
+                  ${entry.summary}
+                  </h2>
+                  <hr />
+                  <h3>
+                    ${monNam} ${dateAt[1]}｜${startsAt} - ${endsAt}
+                  </h3>
+                  <hr />
+                  <p>
+                    Join us for our weekly Fortnite scrim turnoment. Players will team up
+                    in groups of two and will have either 2 hours or 6 games (whichever
+                    ends sooner) to make it to the top of the bracket. Cash prizes are
+                    awarded to the top 3 contestents. $10 entry fee. Cash prize is
+                    dependant on the number of entries.
+                  </p>
+                  <p>
+                    <a class="btn" href="#">Contact us »</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            </div>`
+              );
+            }
+
             i = i + 1;
           });
+          // join the calendarRows in the events div
           $("#events").html(calendarRows.join(""));
         }
       },
+      // throw an error if occured
       function(reason) {
         console.log("Error: " + reason.result.error.message);
       }
@@ -105,6 +172,7 @@ function printCalendar() {
 // Loads the JavaScript client library and invokes `start` afterwards.
 gapi.load("client", printCalendar);
 
+// Set the event listener
 if (window.addEventListener) {
   //call init() on page load
   console.log("> Adding TC39 Event Listener...");

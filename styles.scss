@@ -80,38 +80,51 @@
 }
 #pgdiv {
   width: 100%;
-  //margin-top: -100px;
 }
-#testbox {
+
+// Styles the event section of the page
+#event-sec {
   background-color: #17355f;
   color: white;
-}
-.event-box {
-  margin-top: 25px;
-  margin-right: 5%;
-}
-#events {
-  .evt-mon {
+
+  .event-card {
+    padding: 25px 5px;
+    margin: 10px 1px;
     text-align: center;
-    font-family: "Anton", sans-serif;
-    font-size: 20px;
-    background-image: url(Assets/cir.png);
+    background-color: rgba($color: black, $alpha: 0.1);
+    border-radius: 25px;
+    border: 0.5px solid white;
+    box-shadow: 1px 1px 3px rgb(119, 119, 119);
+
+    img {
+      width: 50%;
+      margin: 25px 0;
+    }
+    h2 {
+      font-family: "Anton", sans-serif;
+      font-size: 35px;
+    }
+    h3 {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+    }
+    p {
+      margin: 10px 35px;
+    }
+    hr {
+      border: 1px solid white;
+      width: 50%;
+    }
+    a {
+      color: #f6d55c;
+      font-weight: 700;
+    }
   }
-  .even-date {
-    font-family: "Anton", sans-serif;
-    font-size: 20px;
-    padding: 1%;
-  }
-  .evt-title {
-    margin-left: 25px;
-    font-family: "Anton", sans-serif;
-    font-size: 25px;
-  }
-  .evt-time {
-    margin-left: 25px;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-  }
+}
+
+#event-clearfix {
+  background-color: #17355f;
+  height: 50px;
 }
 
 //styles for small screens

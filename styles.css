@@ -83,39 +83,54 @@
   width: 100%;
 }
 
-#testbox {
+#event-sec {
   background-color: #17355f;
   color: white;
 }
 
-.event-box {
-  margin-top: 25px;
-  margin-right: 5%;
-}
-
-#events .evt-mon {
+#event-sec .event-card {
+  padding: 25px 5px;
+  margin: 10px 1px;
   text-align: center;
-  font-family: "Anton", sans-serif;
-  font-size: 20px;
-  background-image: url(Assets/cir.png);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  border: 0.5px solid white;
+  -webkit-box-shadow: 1px 1px 3px #777777;
+          box-shadow: 1px 1px 3px #777777;
 }
 
-#events .even-date {
-  font-family: "Anton", sans-serif;
-  font-size: 20px;
-  padding: 1%;
+#event-sec .event-card img {
+  width: 50%;
+  margin: 25px 0;
 }
 
-#events .evt-title {
-  margin-left: 25px;
+#event-sec .event-card h2 {
   font-family: "Anton", sans-serif;
-  font-size: 25px;
+  font-size: 35px;
 }
 
-#events .evt-time {
-  margin-left: 25px;
+#event-sec .event-card h3 {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+}
+
+#event-sec .event-card p {
+  margin: 10px 35px;
+}
+
+#event-sec .event-card hr {
+  border: 1px solid white;
+  width: 50%;
+}
+
+#event-sec .event-card a {
+  color: #f6d55c;
+  font-weight: 700;
+}
+
+#event-clearfix {
+  background-color: #17355f;
+  height: 50px;
 }
 
 @media (max-width: 600px) {
