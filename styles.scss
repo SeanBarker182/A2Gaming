@@ -13,7 +13,9 @@
 // This is used to style the banner image
 #img-head {
   height: 600px;
+
   background: url(Assets/bck_ban.jpg) no-repeat center center fixed;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -125,6 +127,10 @@
 #event-clearfix {
   background-color: #17355f;
   height: 50px;
+}
+#services {
+  background-color: #ebebeb;
+  height: 500px;
 }
 
 //styles for small screens

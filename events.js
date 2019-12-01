@@ -89,12 +89,20 @@ function printCalendar() {
                 "Join us for our weekly Fortnite scrim tournament. Players will team up in groups of two and will have either 2 hours or 6 games (whichever ends sooner) to make it to the top of the bracket. Cash prizes are awarded to the top 3 contestants. $10 entry fee. Cash prize is dependent on the number of entries.";
             } else if (entry.summary == "SUPER SMASH BRACKETS") {
               imgTitle = "ssb.jpg";
+              evtDesc =
+                "It's every player for themselves in our weekly Smash Bros. tournaments every Wednesday 5:30pm to 8:30pm. Competitors will be randomly assigned a bracket and face off in 5 stock, 10 minute matches to reach the top. Prizes for the top 3 contestants and there's a $10 entry fee. Prizes are dependent on number of entries.";
             } else if (entry.summary == "LEAUGE OF LEGENDS TOURNAMENT ") {
               imgTitle = "lol.jpg";
+              evtDesc =
+                "Grab your friends to form a League of Legends team and compete in our Saturday League of Legends tournament. 5 man teams will play through a bracket (best of 1) and the top 3 teams will split the prize pool. Each player has a $10 entry fee, $50 for your team. Prizes dependent on number of entries.";
             } else if (entry.summary == "2v2 TUESDAY - Call of Duty") {
               imgTitle = "cod.jpg";
+              evtDesc =
+                "Bring your friend to our 2v2 Call of Duty tournament every other Tuesday from 4pm to 9pm. Two man teams will play through the brackets and compete for prizes, our top 3 teams will collect prizes from the prize pool. Entry fee is $20 per team and prizes are based on number of entries.";
             } else if (entry.summary == "2V2 TUESDAY - Counter Strike") {
               imgTitle = "cs.jpg";
+              evtDesc =
+                "Come participate in our 2v2 Counter Strike tournament every other Tuesday from 4pm to 9pm. Two man teams will play through the brackets and compete for prizes, our top 3 teams will collect prizes from the prize pool. Entry fee is $20 per team and prizes are based on number of entries.";
             }
             // This is where the magic happens
             // We need this elif loop because the card will have it's own divs to style in row
@@ -114,11 +122,7 @@ function printCalendar() {
                         </h3>
                         <hr />
                         <p>
-                          Join us for our weekly Fortnite scrim turnoment. Players will team up
-                          in groups of two and will have either 2 hours or 6 games (whichever
-                          ends sooner) to make it to the top of the bracket. Cash prizes are
-                          awarded to the top 3 contestents. $10 entry fee. Cash prize is
-                          dependant on the number of entries.
+                          ${evtDesc}
                         </p>
                         <p>
                           <a class="btn" href="#">Contact us »</a>
@@ -140,11 +144,7 @@ function printCalendar() {
                   </h3>
                   <hr />
                   <p>
-                    Join us for our weekly Fortnite scrim turnoment. Players will team up
-                    in groups of two and will have either 2 hours or 6 games (whichever
-                    ends sooner) to make it to the top of the bracket. Cash prizes are
-                    awarded to the top 3 contestents. $10 entry fee. Cash prize is
-                    dependant on the number of entries.
+                    ${evtDesc}
                   </p>
                   <p>
                     <a class="btn" href="#">Contact us »</a>

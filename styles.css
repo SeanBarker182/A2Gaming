@@ -133,6 +133,11 @@
   height: 50px;
 }
 
+#services {
+  background-color: #ebebeb;
+  height: 500px;
+}
+
 @media (max-width: 600px) {
   #img-head {
     height: 400px !important;
