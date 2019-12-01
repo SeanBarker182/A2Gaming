@@ -55,6 +55,7 @@
 }
 
 #about-sec {
+  overflow: hidden;
   margin-top: 50px;
   img {
     width: 100%;
@@ -169,5 +170,10 @@
   #pgdiv {
     width: 100%;
     margin-top: 50px;
+  }
+  #event-sec {
+    p {
+      margin: auto 2px !important;
+    }
   }
 }
