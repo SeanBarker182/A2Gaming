@@ -137,6 +137,12 @@
 @media (max-width: 600px) {
   #img-head {
     height: 400px !important;
+    background: url(Assets/bck_ban.jpg) no-repeat center center scroll;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   #logo {
     min-width: 200px !important;
