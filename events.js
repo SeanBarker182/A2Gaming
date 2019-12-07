@@ -120,7 +120,7 @@ function printCalendar() {
                           ${evtDesc}
                         </p>
                         <p>
-                          <a class="btn" href="#">Contact us »</a>
+                          <a class="btn" href="#contact" data-page="contact">Contact us »</a>
                         </p>
                       </div>
                   </div>`
@@ -142,7 +142,7 @@ function printCalendar() {
                     ${evtDesc}
                   </p>
                   <p>
-                    <a class="btn" href="#">Contact us »</a>
+                    <a class="btn" href="#contact" data-page="contact">Contact us »</a>
                   </p>
                 </div>
               </div>
