@@ -1,3 +1,9 @@
+/* 
+Author: Sean Barker
+Date:   December 7, 2019
+Description: A2 Styles 
+*/
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -63,6 +69,11 @@
   font-family: "Anton", sans-serif;
 }
 
+.title-fix {
+  padding: 25px;
+  font-size: 38px;
+}
+
 .subtitles {
   text-align: center;
   font-family: "roboto", sans-serif;
@@ -97,7 +108,7 @@
   border-radius: 25px;
   border: 0.5px solid white;
   -webkit-box-shadow: 1px 1px 3px #777777;
-          box-shadow: 1px 1px 3px #777777;
+  box-shadow: 1px 1px 3px #777777;
 }
 
 #event-sec .event-card img {
@@ -134,9 +145,72 @@
   height: 50px;
 }
 
-#services {
+#contact {
   background-color: #ebebeb;
-  height: 500px;
+}
+
+#contact form {
+  margin: 0 auto;
+}
+
+#contact #message {
+  height: 125px;
+}
+
+#contact #errorMsg {
+  margin-left: 20px;
+  color: red;
+}
+
+.icons {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.icons .contact-titles {
+  font-family: "raleway", sans-serif;
+  font-size: large;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.icons a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.icons a .material-icons,
+.icons a .icon-text {
+  vertical-align: middle;
+}
+
+.icons a .icon-text-caps,
+.icons a .icon-text-tweaked {
+  text-transform: uppercase;
+}
+
+.icons .location-hours {
+  margin-bottom: 25px;
+}
+
+footer #footer-sec {
+  background-color: #202023;
+  padding-bottom: 30px;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+footer #footer-logo {
+  padding-top: 25px;
+}
+
+footer #logo-foot {
+  width: 35vw;
+  max-width: 180px;
+  background-color: #202023;
 }
 
 @media (max-width: 600px) {

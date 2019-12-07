@@ -1,3 +1,7 @@
+// Author: Sean Barker
+// Date:   December 7, 2019
+// Description: A2 Styles
+
 // This is used to keep the page content contained on large screens
 .wrapper {
   max-width: 1280px;
@@ -66,6 +70,10 @@
   text-align: center;
   font-family: "Anton", sans-serif;
 }
+.title-fix {
+  padding: 25px;
+  font-size: 38px;
+}
 .subtitles {
   text-align: center;
   font-family: "roboto", sans-serif;
@@ -129,9 +137,67 @@
   background-color: #17355f;
   height: 50px;
 }
-#services {
+#contact {
   background-color: #ebebeb;
-  height: 500px;
+
+  form {
+    margin: 0 auto;
+  }
+  #message {
+    height: 125px;
+  }
+
+  #errorMsg {
+    margin-left: 20px;
+    color: red;
+  }
+}
+
+.icons {
+  width: 100%;
+  margin: 0 auto;
+  .contact-titles {
+    font-family: "raleway", sans-serif;
+    font-size: large;
+    font-weight: 700;
+    margin-top: 25px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+
+    display: inline-block;
+    margin-top: 25px;
+    .material-icons,
+    .icon-text {
+      vertical-align: middle;
+    }
+    .icon-text-caps,
+    .icon-text-tweaked {
+      text-transform: uppercase;
+    }
+  }
+  .location-hours {
+    margin-bottom: 25px;
+  }
+}
+// Footer styles
+footer {
+  #footer-sec {
+    background-color: #202023;
+    padding-bottom: 30px;
+    color: white;
+    margin: auto;
+    text-align: center;
+  }
+  #footer-logo {
+    padding-top: 25px;
+  }
+  #logo-foot {
+    width: 35vw;
+    max-width: 180px;
+    background-color: #202023;
+  }
 }
 
 //styles for small screens

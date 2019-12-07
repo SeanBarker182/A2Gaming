@@ -1,12 +1,7 @@
 /* This solution makes use of "simple access" to google, providing only an API Key.
- * This way we can only get access to public calendars. To access a private calendar,
- * we would need to use OAuth 2.0 access.
- *
- * "Simple" vs. "Authorized" access: https://developers.google.com/api-client-library/javascript/features/authentication
- * Examples of "simple" vs OAuth 2.0 access: https://developers.google.com/api-client-library/javascript/samples/samples#authorizing-and-making-authorized-requests
- *
- * We will make use of "Option 1: Load the API discovery document, then assemble the request."
- * as described in https://developers.google.com/api-client-library/javascript/start/start-js
+Author: Sean Barker
+Date:   December 7, 2019
+Description: A2 Calendar Event Puller
  */
 function printCalendar() {
   // set the variables to load from the google API

@@ -1,3 +1,8 @@
+<!-- 
+  Author: Sean Barker
+  Date:   December 7, 2019
+  Description: A2 Index Page
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,6 +17,10 @@
     <link
       href="https://fonts.googleapis.com/css?family=Anton|Raleway:400,700|Roboto&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -30,21 +39,28 @@
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          id="navBut"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <!-- Navbar Links -->
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">About</a>
-            <a class="nav-item nav-link" href="#">Schedule</a>
-            <a class="nav-item nav-link" href="#">Rates</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+            <a class="nav-item nav-link" href="#about-sec" data-page="about-sec"
+              >Services</a
+            >
+            <a class="nav-item nav-link" href="#event-sec" data-page="event-sec"
+              >Schedule</a
+            >
+
+            <a class="nav-item nav-link" href="#contact" data-page="contact"
+              >Contact</a
+            >
           </div>
         </div>
       </nav>
       <!-- Display the hero text -->
-      <div class="hero wrapper">
+      <div class="hero wrapper" id="hero">
         <h1 id="hl1">WELCOME TO <img src="Assets/A2.png" /></h1>
         <h2 id="hl2">FORT WAYNE'S <a id="lan">LAN</a> CENTER</h2>
         <h3 id="hl3">Tournaments｜Lounge｜Events</h3>
@@ -79,20 +95,161 @@
         </div>
       </div>
     </div>
-    <!-- Divider that shows before the Rates section -->
+    <!-- Divider that shows before the Events section -->
     <img src="Assets/divider.png" id="pgdiv" />
     <!-- Display Events section -->
     <div id="event-sec">
-      <h1 class="titles">UPCOMING EVENTS</h1>
+      <h1 class="titles title-fix">UPCOMING EVENTS</h1>
       <div class="wrapper" id="events"></div>
     </div>
     <!-- This adds some padding to the bottom of the events section -->
     <div id="event-clearfix"></div>
     <!-- Next section -->
-    <section id="services"></section>
+    <section id="contact">
+      <h1 class="titles title-fix">CONTACT US</h1>
+      <div class="container-fluid wrapper">
+        <div class="row">
+          <div class="col-md-6">
+            <form
+              class="form-horizontal"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSfG02RuN18wYGr46oaLXug4mmKs7y1Z0oFnVoN-KFK_JXwtkw/formResponse?edit2=2_ABaOnuexSWjyO5J5-L1t-vB2Zn5AjC6yymMbHg2s4EpSEH_oMs4pYEsM-nA"
+            >
+              <fieldset>
+                <!-- Form starts here -->
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="name">Name</label>
+                  <div class="col-md-12">
+                    <input
+                      id="name"
+                      name="entry.2005620554"
+                      type="text"
+                      placeholder="Lara Croft"
+                      class="form-control input-md"
+                    />
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="email"
+                    >Email</label
+                  >
+                  <div class="col-md-12">
+                    <input
+                      id="email"
+                      name="entry.1045781291"
+                      type="text"
+                      placeholder="example@domain.com"
+                      class="form-control input-md"
+                    />
+                  </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                  <label class="col-md-5 control-label" for="message"
+                    >Message</label
+                  >
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      name="entry.839337160"
+                    ></textarea>
+                  </div>
+                </div>
+                <p id="errorMsg"></p>
+                <!-- Button -->
+                <div class="form-group">
+                  <div class="col-md-4">
+                    <input type="submit" name="btnSubmit" value="Send" />
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <!-- Contact info section -->
+          <div class="col-md-6 icons">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a href="tel:12608675309">
+                        <i class="material-icons">phone</i>
+                        &nbsp;&nbsp;&nbsp;
+                        <span class="icon-text">(260) 867-5309</span>
+                      </a>
+                      <br />
+                      <a href="mailto:a2ftwayne@gmail.com">
+                        <i class="material-icons">email</i>
+                        &nbsp;&nbsp;&nbsp;
+                        <span class="icon-text">a2ftwayne@gmail.com</span>
+                      </a>
+
+                      <a
+                        href="https://www.google.com/maps/place/Fort+Wayne,+IN"
+                      >
+                        <i class="material-icons">location_on</i>
+                        &nbsp;&nbsp;&nbsp;
+                        <span class="icon-text"
+                          >123 Fake Street <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          Fort Wayne, Indiana 46825</span
+                        >
+                      </a>
+                    </div>
+                    <div class="col-md-6">
+                      <!-- Hours section -->
+                      <h2 class="contact-titles"><strong>HOURS:</strong></h2>
+
+                      <table class="location-hours">
+                        <tbody>
+                          <tr>
+                            <td>Mon-Thurs:&nbsp;</td>
+
+                            <td>&nbsp;11:00 AM – 9:00 PM</td>
+                          </tr>
+                          <tr>
+                            <td>Friday:&nbsp;</td>
+                            <td>&nbsp;11:00 AM – 11:00 PM</td>
+                          </tr>
+                          <tr>
+                            <td>Saturday:&nbsp;</td>
+                            <td>&nbsp;10:00 AM – 11:00 PM</td>
+                          </tr>
+                          <tr>
+                            <td>Sunday:&nbsp;</td>
+                            <td>&nbsp;11:00 AM – 8:00 PM</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Display the footer -->
     <footer>
-      <p>&copy; <span id="year"></span>. All rights reserved.</p>
+      <div id="footer-sec">
+        <div class="contain">
+          <div id="footer-logo">
+            <img
+              src="Assets/a2_logo.png"
+              class="img-fluid"
+              id="logo-foot"
+              alt="A2 Logo"
+            />
+          </div>
+          <p>&copy; <span id="year"></span>. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
     <script>
       var currentYear = new Date().getFullYear();
@@ -105,5 +262,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="events.js"></script>
+    <script src="form.js"></script>
+    <script src="scroll.js"></script>
   </body>
 </html>
